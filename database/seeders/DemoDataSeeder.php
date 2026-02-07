@@ -51,7 +51,10 @@ class DemoDataSeeder extends Seeder
             'name' => 'Acme Corporation',
             'email' => 'contact@acme.com',
             'phone' => '+30 210 1234567',
-            'billing_address' => 'Athens, Greece',
+            'address' => '1 Acme Street',
+            'city' => 'Athens',
+            'postal_code' => '105 63',
+            'country' => 'Greece',
             'tax_id' => 'EL123456789',
             'description' => 'Large corporate client',
         ]);
@@ -61,7 +64,10 @@ class DemoDataSeeder extends Seeder
             'name' => 'TechStart Inc',
             'email' => 'hello@techstart.io',
             'phone' => '+30 210 9876543',
-            'billing_address' => 'Thessaloniki, Greece',
+            'address' => '42 Innovation Ave',
+            'city' => 'Thessaloniki',
+            'postal_code' => '546 22',
+            'country' => 'Greece',
             'tax_id' => 'EL987654321',
             'description' => 'Startup client - fast-paced projects',
         ]);
@@ -71,7 +77,10 @@ class DemoDataSeeder extends Seeder
             'name' => 'Local Shop',
             'email' => 'info@localshop.gr',
             'phone' => '+30 211 5555555',
-            'billing_address' => 'Patras, Greece',
+            'address' => '7 Market Street',
+            'city' => 'Patras',
+            'postal_code' => '262 21',
+            'country' => 'Greece',
             'tax_id' => 'EL555555555',
         ]);
 
