@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.bg-indigo-50 {
+		@apply bg-blue-50;
+	}
+	.bg-indigo-100 {
+		@apply bg-blue-100;
+	}
+	.bg-indigo-500 {
+		@apply bg-blue-500;
+	}
+	.bg-indigo-600 {
+		@apply bg-blue-600;
+	}
+	.bg-indigo-700 {
+		@apply bg-blue-700;
+	}
+	.text-indigo-600 {
+		@apply text-blue-600;
+	}
+	.text-indigo-700 {
+		@apply text-blue-700;
+	}
+	.border-indigo-400 {
+		@apply border-blue-400;
+	}
+	.border-indigo-500 {
+		@apply border-blue-500;
+	}
+	.focus\:ring-indigo-500:focus {
+		--tw-ring-color: rgb(59 130 246 / 1);
+	}
+	.focus\:border-indigo-500:focus {
+		border-color: rgb(59 130 246 / 1);
+	}
+}
