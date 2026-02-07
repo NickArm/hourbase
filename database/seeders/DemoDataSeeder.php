@@ -344,16 +344,16 @@ class DemoDataSeeder extends Seeder
         InvoiceItem::create([
             'invoice_id' => $invoice1->id,
             'task_id' => $task1->id,
-            'hours' => 8.0,
-            'rate' => 80.00,
+            'quantity' => 8.0,
+            'unit_price' => 80.00,
             'amount' => 640.00,
         ]);
 
         InvoiceItem::create([
             'invoice_id' => $invoice1->id,
             'task_id' => $task5->id,
-            'hours' => 2.0,
-            'rate' => 80.00,
+            'quantity' => 2.0,
+            'unit_price' => 80.00,
             'amount' => 160.00,
         ]);
 
@@ -374,24 +374,24 @@ class DemoDataSeeder extends Seeder
         InvoiceItem::create([
             'invoice_id' => $invoice2->id,
             'task_id' => $task6->id,
-            'hours' => 10.0,
-            'rate' => 80.00,
+            'quantity' => 10.0,
+            'unit_price' => 80.00,
             'amount' => 800.00,
         ]);
 
         InvoiceItem::create([
             'invoice_id' => $invoice2->id,
             'task_id' => $task8->id,
-            'hours' => 6.0,
-            'rate' => 80.00,
+            'quantity' => 6.0,
+            'unit_price' => 80.00,
             'amount' => 480.00,
         ]);
 
         InvoiceItem::create([
             'invoice_id' => $invoice2->id,
             'task_id' => $task7->id,
-            'hours' => 4.0,
-            'rate' => 80.00,
+            'quantity' => 4.0,
+            'unit_price' => 80.00,
             'amount' => 320.00,
         ]);
 
@@ -412,8 +412,8 @@ class DemoDataSeeder extends Seeder
         InvoiceItem::create([
             'invoice_id' => $invoice3->id,
             'task_id' => $task2->id,
-            'hours' => 5.5,
-            'rate' => 80.00,
+            'quantity' => 5.5,
+            'unit_price' => 80.00,
             'amount' => 440.00,
         ]);
 
