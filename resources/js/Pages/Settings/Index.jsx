@@ -586,7 +586,7 @@ export default function Index({ user, trelloIntegration = null, projects = [] })
                     {/* Integrations Tab */}
                     {activeTab === 'integrations' && (
                         <div className="space-y-6">
-                            <TrelloImport 
+                            <TrelloImport
                                 trelloIntegration={trelloIntegration}
                                 projects={projects}
                             />

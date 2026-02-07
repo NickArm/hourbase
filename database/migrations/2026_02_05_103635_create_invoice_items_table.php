@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -11,14 +9,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (Schema::hasTable('invoice_items')) {
-            return;
-        }
-
-        Schema::create('invoice_items', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        // No-op. The invoice_items table is created in
+        // 2026_02_05_103636_create_invoice_items_table.php.
     }
 
     /**
@@ -26,6 +18,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('invoice_items');
+        // No-op.
     }
 };
