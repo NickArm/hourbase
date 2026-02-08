@@ -92,7 +92,8 @@ class TaskController extends Controller
     {
         // Verify task belongs to user
         $task->loadMissing('project.client');
-        if ($task->project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $task->project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -110,7 +111,8 @@ class TaskController extends Controller
     {
         // Verify task belongs to user
         $task->loadMissing('project.client');
-        if ($task->project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $task->project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -141,7 +143,8 @@ class TaskController extends Controller
     {
         // Verify task belongs to user
         $task->loadMissing('project.client');
-        if ($task->project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $task->project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -192,7 +195,8 @@ class TaskController extends Controller
     {
         // Verify task belongs to user
         $task->loadMissing('project.client');
-        if ($task->project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $task->project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -224,7 +228,8 @@ class TaskController extends Controller
             ->get();
 
         foreach ($tasks as $task) {
-            if ($task->project->client->user_id !== auth()->id()) {
+            $userId = auth()->id();
+            if (! $userId || (int) $task->project->client->user_id !== (int) $userId) {
                 abort(403);
             }
         }

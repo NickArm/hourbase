@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
 class TagController extends Controller
@@ -55,7 +56,8 @@ class TagController extends Controller
     public function show(Tag $tag)
     {
         // Verify tag belongs to user
-        if ($tag->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $tag->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -72,7 +74,8 @@ class TagController extends Controller
     public function edit(Tag $tag)
     {
         // Verify tag belongs to user
-        if ($tag->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $tag->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -87,7 +90,8 @@ class TagController extends Controller
     public function update(Request $request, Tag $tag)
     {
         // Verify tag belongs to user
-        if ($tag->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $tag->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -108,7 +112,8 @@ class TagController extends Controller
     public function destroy(Tag $tag)
     {
         // Verify tag belongs to user
-        if ($tag->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $tag->user_id !== (int) $userId) {
             abort(403);
         }
 

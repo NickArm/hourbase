@@ -67,7 +67,8 @@ class ClientController extends Controller
     public function show(Client $client)
     {
         // Verify client belongs to user
-        if ($client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -86,7 +87,8 @@ class ClientController extends Controller
     public function edit(Client $client)
     {
         // Verify client belongs to user
-        if ($client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -101,7 +103,8 @@ class ClientController extends Controller
     public function update(Request $request, Client $client)
     {
         // Verify client belongs to user
-        if ($client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -133,7 +136,8 @@ class ClientController extends Controller
     public function destroy(Client $client)
     {
         // Verify client belongs to user
-        if ($client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $client->user_id !== (int) $userId) {
             abort(403);
         }
 

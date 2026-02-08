@@ -75,7 +75,8 @@ class ProjectController extends Controller
     {
         // Verify project belongs to user
         $project->loadMissing('client');
-        if ($project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -95,7 +96,8 @@ class ProjectController extends Controller
     {
         // Verify project belongs to user
         $project->loadMissing('client');
-        if ($project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -118,7 +120,8 @@ class ProjectController extends Controller
     {
         // Verify project belongs to user
         $project->loadMissing('client');
-        if ($project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -150,7 +153,8 @@ class ProjectController extends Controller
     {
         // Verify project belongs to user
         $project->loadMissing('client');
-        if ($project->client->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $project->client->user_id !== (int) $userId) {
             abort(403);
         }
 
