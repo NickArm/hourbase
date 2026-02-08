@@ -226,6 +226,15 @@ export default function Welcome({ auth }) {
                 <div className="hb-landing-footer-inner mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-3 px-6 py-6 text-sm text-slate-500 md:flex-row">
                     <span className="hb-landing-footer-brand">© 2026 Hourbase</span>
                     <span className="hb-landing-footer-tagline">Your time, organized.</span>
+                    <div className="flex items-center gap-4">
+                        <a href="/CHANGELOG.md" target="_blank" className="hover:text-slate-900 transition-colors">
+                            Changelog
+                        </a>
+                        <span>•</span>
+                        <a href="https://armenisnick.gr" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">
+                            Developed by Nick Armenis
+                        </a>
+                    </div>
                 </div>
             </footer>
         </div>
