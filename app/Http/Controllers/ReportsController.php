@@ -138,7 +138,7 @@ class ReportsController extends Controller
                 return [
                     'id' => $project->id,
                     'name' => $project->name,
-                    'client' => $project->client->name,
+                    'client' => $project->client?->name ?? 'Unknown',
                     'status' => $project->status,
                     'completedTasks' => $completedTasks,
                     'totalTasks' => $totalTasks,
@@ -180,11 +180,11 @@ class ReportsController extends Controller
             }])
             ->get()
             ->map(function ($client) {
-                $projects = $client->projects;
+                $projects = $client->projects ?? collect();
                 $totalHours = $projects->sum(function ($project) {
-                    return $project->tasks->sum(function ($task) {
-                        return $task->timeEntries->sum('hours');
-                    });
+                    return $project->tasks?->sum(function ($task) {
+                        return $task->timeEntries?->sum('hours') ?? 0;
+                    }) ?? 0;
                 });
 
                 $billableHours = $projects->sum(function ($project) {

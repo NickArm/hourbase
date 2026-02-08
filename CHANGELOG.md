@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.0.7] - 2026-02-08
+### Added
+- Created TimeEntries Edit page for editing existing time entries
+- Added developer credit in footer linking to armenisnick.gr
+
+### Fixed
+- Fixed null reference error in ReportsController for projects without client
+- Fixed null reference error in ReportsController for clients method
+- Improved error handling in Reports page to prevent 500 errors
+
 ## [9.0.6] - 2026-02-08
 ### Fixed
 - Fixed invoice_items seeder to use renamed columns (quantity, unit_price) instead of (hours, rate)
