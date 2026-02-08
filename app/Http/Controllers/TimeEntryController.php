@@ -77,7 +77,8 @@ class TimeEntryController extends Controller
     public function show(TimeEntry $timeEntry)
     {
         // Verify time entry belongs to user
-        if ($timeEntry->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $timeEntry->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -92,7 +93,8 @@ class TimeEntryController extends Controller
     public function edit(TimeEntry $timeEntry)
     {
         // Verify time entry belongs to user
-        if ($timeEntry->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $timeEntry->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -114,7 +116,8 @@ class TimeEntryController extends Controller
     public function update(Request $request, TimeEntry $timeEntry)
     {
         // Verify time entry belongs to user
-        if ($timeEntry->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $timeEntry->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -144,7 +147,8 @@ class TimeEntryController extends Controller
     public function destroy(TimeEntry $timeEntry)
     {
         // Verify time entry belongs to user
-        if ($timeEntry->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $timeEntry->user_id !== (int) $userId) {
             abort(403);
         }
 

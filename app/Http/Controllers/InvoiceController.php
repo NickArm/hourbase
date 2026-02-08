@@ -100,7 +100,8 @@ class InvoiceController extends Controller
     public function show(Invoice $invoice)
     {
         // Verify invoice belongs to user
-        if ($invoice->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $invoice->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -117,7 +118,8 @@ class InvoiceController extends Controller
     public function edit(Invoice $invoice)
     {
         // Verify invoice belongs to user
-        if ($invoice->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $invoice->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -143,7 +145,8 @@ class InvoiceController extends Controller
     public function update(Request $request, Invoice $invoice)
     {
         // Verify invoice belongs to user
-        if ($invoice->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $invoice->user_id !== (int) $userId) {
             abort(403);
         }
 
@@ -197,7 +200,8 @@ class InvoiceController extends Controller
     public function destroy(Invoice $invoice)
     {
         // Verify invoice belongs to user
-        if ($invoice->user_id !== auth()->id()) {
+        $userId = auth()->id();
+        if (! $userId || (int) $invoice->user_id !== (int) $userId) {
             abort(403);
         }
 
